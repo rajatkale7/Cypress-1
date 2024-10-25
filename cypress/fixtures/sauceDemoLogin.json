@@ -1,0 +1,42 @@
+{
+    
+    "user1":{
+        "userName": "standard_user",
+        "password": "secret_sauce"
+    },
+
+    "user2":{
+        "userName": "performance_glitch_user",
+        "password": "secret_sauce"
+    },
+
+    "user3":{
+        "userName": "problem_user",
+        "password": "secret_sauce"
+    },
+
+    "user4":{
+        "userName": "standard_user",
+        "password": "secret_sauce"
+    },
+
+    "user5":{
+        "userName": "standard_user",
+        "password": "secret_sauce"
+    },
+
+    "user6":{
+        "userName": "standard_user",
+        "password": "secret_sauce"
+    },
+
+    "user7":{
+        "userName": "standard_user",
+        "password": "secret_sauce"
+    },
+
+    "user8":{
+        "userName": "standard_user",
+        "password": "secret_sauce"
+    }
+}

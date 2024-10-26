@@ -53,13 +53,13 @@ describe('it is for login', () => {
 
     let expectedName="manda user"; //this is the username on the dashboard after login
     cy.xpath("//p[@class='oxd-userdropdown-name']").then((userNameWebElement) =>{
+      //userNameWebElement is the name of the variable where captured web-element is stored
 
       //BDD Style
       let actualName= userNameWebElement.text();
       //verify if both are same-->
       expect(actualName).to.equal(expectedName);
     })
-
     
   })
 
@@ -67,9 +67,5 @@ describe('it is for login', () => {
     cy.wait(2000);
     //cy.get('.orangehrm-login-forgot > .oxd-text')
     cy.xpath("//body//div[4]//p").click();
-
-    
-    
-
   })
 })

@@ -12,7 +12,7 @@ describe('it is for login', () => {
 
   it('Checks the Login page Web Elements', () =>{
     //1. URL based Assertions-->
-
+    
     cy.url().should('include', 'orangehrm');  //Assertion which checks that url contains the specified part
     cy.url().should('eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
     cy.url().should('contain', 'demo');
@@ -52,13 +52,16 @@ describe('it is for login', () => {
     //Explicit assertion--> these are the custom assertions defined by us
 
     let expectedName="manda user"; //this is the username on the dashboard after login
+
     cy.xpath("//p[@class='oxd-userdropdown-name']").then((userNameWebElement) =>{
       //userNameWebElement is the name of the variable where captured web-element is stored
 
-      //BDD Style
-      let actualName= userNameWebElement.text();
-      //verify if both are same-->
+      let actualName= userNameWebElement.text();    //method to pull text from element
+      //BDD Style-->
       expect(actualName).to.equal(expectedName);
+
+      //TDD style-->
+      assert.equal(actualName, expectedName);
     })
     
   })
@@ -67,5 +70,7 @@ describe('it is for login', () => {
     cy.wait(2000);
     //cy.get('.orangehrm-login-forgot > .oxd-text')
     cy.xpath("//body//div[4]//p").click();
+
+    //Assertions
   })
 })

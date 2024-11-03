@@ -15,6 +15,7 @@ describe('This is a Sauce-Demo website', () =>{
             cy.xpath('//div/form/input[2]').type(user.password);
             cy.xpath('//div/form/input[3]').click();
             cy.wait(500);
+            cy.url().should('contain', 'inventory');
         })
     })
 })

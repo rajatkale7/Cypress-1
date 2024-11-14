@@ -6,7 +6,7 @@ describe('This is a Sauce-Demo website', () =>{
     })
 
     it('Performs the login', function(){
-        const userKeys= ['user1', 'user2', 'user3', 'user4', 'user5', 'user6', 'user7', 'user8'];   //Keys of the login credentials, refer sauceDemoLogin.json folder for clarity
+        const userKeys= ['user1', 'user1', 'user1', 'user1', 'user1', 'user1', 'user1', 'user1', 'user2', 'user3', 'user4', 'user5', 'user6', 'user7', 'user8'];   //Keys of the login credentials, refer sauceDemoLogin.json folder for clarity
 
         userKeys.forEach((key) => {
             const user= this.userData[key];   //store the value for each key

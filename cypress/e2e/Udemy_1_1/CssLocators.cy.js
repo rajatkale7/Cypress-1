@@ -48,7 +48,9 @@ describe('Suite is for testing ecom website', () =>{
 
     it('Performs add to cart on the element dynamically', () => {
         cy.get('input.search-keyword').type('ca');
-        cy.wait(2000);
+        cy.wait(2000).then(() =>{
+            console.log('I am a Cypress Learner');  //then() is just stitching. IGNORE then() block for this test
+        });
         //I want to click on the product with name "cashew"
 
         cy.get('.products').find('.product').each(($el, index, $list) => {
@@ -63,8 +65,8 @@ describe('Suite is for testing ecom website', () =>{
                 //$el.find('button').click();  If I uncomment this line, click() will not work. and hence we used wrap().
             }
         })
-
     })
+    
 })
 
 /*

@@ -56,10 +56,33 @@ describe('We are handling Cypress Behaviour', () => {
         NOTE: Inspect--> console to see printed matter
         */
 
+        //Handled the behaviour
         cy.wait(3000).then(() => {
             console.log('Stiched and then printed that I am a cypress learner')
         })
+    })
 
+    it('Simple clicking Automation exercise', () => {
+        cy.get('input.search-keyword').type('ca');
+        cy.wait(1000);
+        cy.get('.products').find('.product').each(($el, index, $list) => {
+            const elementText= $el.find('.product-name').text();  //Chaining and then extract the text from the attribute
+            if(elementText.includes('Cashews')){
+
+                //IMP*IMP*IMP--> $el is a single web element but that element contains other tags also(child elements)
+                //above thing is about line 55 and 61
+                
+                cy.wrap($el).find('button').click();    //button is the tag name and it can be used as a CSS
+
+                //$el.find('button').click();  If I uncomment this line, click() will not work. and hence we used wrap().
+            }
+        })
+
+        cy.get('a.cart-icon').as('cartIcon');
+        cy.get('@cartIcon').click().then(() => {
+            cy.get('.cart-preview').contains('PROCEED TO CHECKOUT').click();
+        })
+        cy.get('button').contains('Place Order').click();
         
     })
 })

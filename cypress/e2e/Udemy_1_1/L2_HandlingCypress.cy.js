@@ -83,6 +83,5 @@ describe('We are handling Cypress Behaviour', () => {
             cy.get('.cart-preview').contains('PROCEED TO CHECKOUT').click();
         })
         cy.get('button').contains('Place Order').click();
-        
     })
 })

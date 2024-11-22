@@ -3,7 +3,6 @@ describe('this suite is for Searching the flights', () =>{
         cy.viewport('macbook-11');
         cy.wait(200);
         cy.visit('https://www.google.com');
-        //cy.visit('https://www.sci-hub.ren/');
     })
 
     it('Performs Google Scholor search', () =>{

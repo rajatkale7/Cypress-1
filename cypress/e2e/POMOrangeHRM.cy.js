@@ -1,4 +1,5 @@
 import Login from '../../PageObjects/Login';    //.. means move to one folder out of this file.
+
 describe('Login Tests', () => {
     beforeEach('Lanches the URL', () =>{
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');

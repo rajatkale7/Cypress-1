@@ -31,7 +31,7 @@ describe('it is for login', () => {
     /*
     -we can also do chaining ->
     cy.url().should().should().should();
-    -we can avoid writing 'should' keyword->
+    -we can avoid writing 'should' keyword multiple times->
     cy.url().should().and();
     */
     

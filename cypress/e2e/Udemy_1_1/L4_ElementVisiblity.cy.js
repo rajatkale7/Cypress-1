@@ -16,5 +16,6 @@ Test isolation:
 #Objective: if our test cases are of the same web page, then why to reload the page again.
 #Cypress behaviour: it isolated every it() block from each other.
 #Solution: prevent the isolation and disable it. How?? tell the suite to disable it. {tetsIsolation: false}
+#But WHY?? : Loading same webpage will lead to slow down the test execution time and hamper the performance.
 
 */

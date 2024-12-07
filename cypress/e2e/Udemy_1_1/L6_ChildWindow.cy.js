@@ -28,7 +28,13 @@ describe('Child window and Origin Switching', () => {
         */
 
         cy.origin('https://www.qaclickacademy.com/', () => {
-            //cy.get('.button.float-left').click();      //is Now working fine
+            cy.get('.button.float-left').click();      //is Now working fine
         })
+    })
+
+    it.only('Runs This Test only', () => {
+        //it.only() is used for debugging purpose. so that other tests can remain silent
+        cy.log('Only This test run');
+        console.log('This Test only');
     })
 })
